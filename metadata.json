@@ -1,0 +1,5 @@
+{
+  "name": "Sonote",
+  "description": "Enterprise-grade batch audio transcription tool. Powered by High-Performance ASR and LLMs for maximum accuracy and privacy.",
+  "requestFramePermissions": []
+}

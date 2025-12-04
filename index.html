@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sonote - Batch Audio Transcription</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              coffee: {
+                50: '#fcfaf8',
+                100: '#f6f1ec',
+                200: '#ede4da',
+                300: '#e0cbbc',
+                400: '#d0ad96',
+                500: '#c08e72',
+                600: '#b3765e',
+                700: '#955d4b',
+                800: '#7c4d41',
+                900: '#643f37',
+              },
+              slate: {
+                850: '#1e293b',
+              }
+            },
+            animation: {
+              'spin-slow': 'spin 3s linear infinite',
+              'slide-in': 'slideIn 0.3s ease-out',
+            },
+            keyframes: {
+              slideIn: {
+                '0%': { transform: 'translateX(100%)', opacity: '0' },
+                '100%': { transform: 'translateX(0)', opacity: '1' },
+              }
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+      /* Custom scrollbar for a cleaner look */
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #cbd5e1;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #94a3b8;
+      }
+    </style>
+</head>
+  <body class="bg-gray-50 text-slate-800 antialiased h-screen flex flex-col overflow-hidden">
+    <div id="root" class="h-full flex flex-col"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
